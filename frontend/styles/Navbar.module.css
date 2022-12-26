@@ -1,0 +1,58 @@
+.container {
+  height: 100px;
+  font-weight: 900;
+
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Roboto";
+  color: #444;
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  flex: 1;
+}
+
+.menu span {
+  margin-right: 10%;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.menu span:hover {
+  border-bottom: 3px solid #f42155;
+}
+
+.auth {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+.login{
+
+    margin-right: 10%;
+    cursor: pointer;
+}
+.register{
+
+    cursor: pointer;
+    background-color: #f42155;
+    padding: 10px;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 15px;
+}
