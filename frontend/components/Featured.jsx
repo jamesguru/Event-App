@@ -7,7 +7,7 @@ const Featured = () => {
       <div className={styles.container}>
         <div className={styles.featured_desc}>
           <h2>Experience More</h2>
-          <h1>The Cheapest tickets on the internet,period.</h1>
+          <h1>The Cheapest tickets on the internet, period.</h1>
           <span className={styles.featured_span}>
             Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
             in laying out print, graphic or web designs. The passage is
@@ -17,7 +17,7 @@ const Featured = () => {
         <div className={styles.image}>
           <Image
             src="/Featured.jpg"
-            width={600}
+            width={700}
             height={550}
             objectFit="contain"
           />

@@ -1,0 +1,135 @@
+.events_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0% 5%;
+}
+
+.events_header h3 {
+  font-size: 40px;
+  font-family: "Roboto";
+  font-weight: 900;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.events_type {
+  margin-right: 30%;
+}
+
+.events_type select {
+  background-color: whitesmoke;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.events_type option {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.events_category select {
+  background-color: whitesmoke;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.events_type option {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.events_body {
+  margin: 2% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.event_item {
+    margin: 3% 0%;
+  position: relative;
+  width: 30%;
+  height: 35%;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+.image {
+  object-fit: cover;
+}
+
+.event_image {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  z-index: 999;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.info span {
+  background-color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  color: #f42155;
+  font-weight: 900;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  
+}
+
+.heart_icon{
+
+    height: 50px;
+    width: 50px;
+    background-color: #f42155;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 200px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.heart_icon:hover{
+
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #f42155;
+}
+
+.event_desc{
+
+    display: flex;
+}
+
+.event_date h3{
+
+    margin: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Roboto";
+    color: #444;
+}
