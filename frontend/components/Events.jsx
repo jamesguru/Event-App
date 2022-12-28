@@ -75,7 +75,7 @@ const Events = () => {
             />
           </div>
           <div className={styles.info}>
-            <span>$10</span>
+            <span>FREE</span>
             <FaHeart className={styles.heart_icon} />
           </div>
 
@@ -139,7 +139,7 @@ const Events = () => {
             />
           </div>
           <div className={styles.info}>
-            <span>$35</span>
+            <span>Free</span>
             <FaHeart className={styles.heart_icon} />
           </div>
 
@@ -224,6 +224,11 @@ const Events = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className={styles.load_more}>
+
+            <button>Load more</button>
       </div>
     </div>
   );

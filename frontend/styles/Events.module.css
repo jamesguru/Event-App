@@ -70,6 +70,13 @@
 
 .event_image {
   position: relative;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.event_image:hover{
+
+    transform: scale(1.05);
 }
 
 .info {
@@ -132,4 +139,24 @@
     font-weight: 900;
     font-family: "Roboto";
     color: #444;
+}
+
+
+.load_more{
+
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load_more button{
+
+  padding: 10px;
+  border:  none;
+  font-weight: 900;
+  width: 150px;
+  font-size: 18px;
+  color: #f42155;
+  cursor: pointer;
 }
