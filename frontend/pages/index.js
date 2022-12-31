@@ -7,16 +7,15 @@ import Navbar from "../components/NavBar";
 import Featured from "../components/Featured";
 import Events from "../components/Events";
 import Footer from "../components/Footer";
+import HomePage from "../components/Home";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
-      <Featured />
-      <Events />
-      <Footer />
+      <HomePage />
     </div>
   );
 }
