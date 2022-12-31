@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
 const Featured = () => {
+
+  
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -20,6 +22,7 @@ const Featured = () => {
             width={700}
             height={550}
             objectFit="contain"
+            alt="no photo"
           />
         </div>
       </div>
@@ -60,6 +63,8 @@ const Featured = () => {
 
         <button>Find events</button>
       </div>
+
+
     </div>
   );
 };

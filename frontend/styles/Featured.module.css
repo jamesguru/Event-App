@@ -45,9 +45,9 @@
   background-color: whitesmoke;
   padding: 20px;
   position: absolute;
-  bottom: 5%;
+  bottom: 1%;
   right: 10%;
-  height: 15%;
+  height: 20%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

@@ -1,0 +1,45 @@
+.container{
+
+    margin: 50px;
+    display: flex;
+}
+
+.image{
+
+    margin-bottom: -10%;
+}
+.profile{
+
+   width: 50%;
+   padding: 10px; 
+}
+
+.profile span{
+
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f42155;
+    color: #fff;
+    padding: 20px;
+    transition: all 1s ease;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+.profile span:hover{
+
+    transform: scale(1.1);
+    
+}
+
+.mc_item{
+
+    height: 30%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
