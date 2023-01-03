@@ -1,3 +1,7 @@
+.footer{
+  background-color: #fafafb;
+}
+
 .footer hr{
 
  margin: 0% 3%;
@@ -13,9 +17,9 @@
 
 
 .container {
-  background-color: #fafafb;
+ 
   color: #3d3d4e;
-  height: 50vh;
+  height: auto;
   margin: 100px 0px;
   display: flex;
   align-items: center;

@@ -8,14 +8,13 @@ const Navbar = () => {
   const [login, setLogin] = useState(false);
   const [register, setRegister] = useState(false);
 
-  const handleSaveNote = (e, articleId) => {    
+  const handleSaveNote = (e, articleId) => {
     const event = e || window.event;
-      event.preventDefault();     
-      setArticleId(articleId);
+    event.preventDefault();
+    setArticleId(articleId);
 
-      setLogin(false);
-      
-     };
+    setLogin(false);
+  };
 
   const handleLogin = () => {
     setLogin(true);
@@ -27,7 +26,9 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.container}>
-        <span className={styles.logo}>MVX</span>
+        <span className={styles.logo}>
+          <Link href="/">MVX</Link>
+        </span>
 
         <div className={styles.menu}>
           <span>
