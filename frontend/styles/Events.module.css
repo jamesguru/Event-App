@@ -91,14 +91,15 @@
 }
 
 .info span {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 15px;
-  font-size: 20px;
-  color: #f42155;
+  font-size: 25px;
+  font-family: 'Roboto';
+  color: #fff;
   font-weight: 900;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
+import Link from "next/link";
 const Featured = () => {
 
   
@@ -60,8 +61,10 @@ const Featured = () => {
             </select>
           </div>
         </div>
-
-        <button>Find events</button>
+        <Link href="/eventslist">
+          <button>Find events</button>
+        </Link>
+        
       </div>
 
 

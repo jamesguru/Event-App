@@ -1,11 +1,13 @@
 .container {
   height: 100px;
   font-weight: 900;
-
+position: sticky;
+top: 0;
   padding: 10px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
   
 }
 
