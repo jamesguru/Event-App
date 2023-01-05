@@ -6,7 +6,7 @@
 .container {
   height: 70vh;
   width: 100vw;
-  margin: 100px 0px;
+  margin: 50px 0px;
 
   display: flex;
 }
@@ -36,9 +36,16 @@
 }
 
 .image {
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: flex-end;
+}
+
+.image video{
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .search {

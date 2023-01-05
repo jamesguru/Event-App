@@ -18,12 +18,13 @@ const Featured = () => {
           </span>
         </div>
         <div className={styles.image}>
-          <Image
-            src="/Featured.jpg"
-            width={700}
-            height={550}
-            objectFit="contain"
-            alt="no photo"
+          <video
+            src="/video.mp4"
+            
+            autoPlay
+            muted
+            loop
+           
           />
         </div>
       </div>
