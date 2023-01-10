@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+}
+.image {
+
+  position: relative;
+}
+
+
+.detailed{
+
+  height: 70%;
+  width: 70%;
+  position: absolute;
+  background-color: #fff;
+  bottom: -40%;
+  right: 20%;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.detailed h2{
+
+  margin: 30px;
+  font-size: 25px;
+  font-family: "Roboto";
+}
+
+.detailed span{
+  margin: 0px 30px;
+  display: inline;
+  
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.reminder button{
+
+  margin: 30px;
+  padding: 10px;
+  border: none;
+  background-color: #f42155;
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.bottom_detail{
+
+  margin: 30px;
+  width: 70%;
+}
+
+.icons{
+  font-size: 30px;
+  color: #f42155;
+  margin-right: 20px;
+}
+
+.media{
+
+  margin: 0px 20%;
+}
+
+.media h2{
+
+  font-family: "Roboto";
+  margin-bottom: 20px;
+  color: #444;
+}
