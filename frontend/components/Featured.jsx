@@ -63,7 +63,7 @@ const Featured = () => {
           </div>
         </div>
         <Link href="/eventslist">
-          <button>Find events</button>
+          <button className={styles.events_button}>Find events</button>
         </Link>
         
       </div>

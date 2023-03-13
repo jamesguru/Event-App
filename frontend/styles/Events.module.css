@@ -2,14 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0% 5%;
+  margin: 5%;
 }
 
 .events_header h3 {
   font-size: 40px;
   font-family: "Roboto";
   font-weight: 900;
-  color: #333;
+  color: #8a3758;
 }
 
 .filters {
@@ -34,13 +34,17 @@
 .events_type option {
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+  padding: 20px;
 }
 
 .events_category select {
-  background-color: whitesmoke;
-  padding: 10px;
+  background-color: transparent;
+  color: whitesmoke;
+  padding: 20px;
   font-size: 20px;
   font-weight: bold;
+ 
   cursor: pointer;
   border: none;
 }
@@ -48,6 +52,7 @@
 .events_type option {
   font-size: 20px;
   font-weight: bold;
+  background-color: transparent;
 }
 
 .events_body {
@@ -111,7 +116,7 @@
 
     height: 50px;
     width: 50px;
-    background-color: #f42155;
+    background-color: #8a3758;
     border-radius: 50%;
     color: #fff;
     padding: 10px;

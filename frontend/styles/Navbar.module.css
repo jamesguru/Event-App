@@ -1,21 +1,21 @@
 .container {
   height: 100px;
   font-weight: 900;
-position: sticky;
-top: 0;
+  position: sticky;
+  top: 0;
   padding: 10px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-  
+  background-image: linear-gradient(to left, #401a29, #8a3758);
+  color: whitesmoke;
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 900;
   font-family: "Roboto";
-  color: #444;
+  color: whitesmoke;
   flex: 1;
 }
 
@@ -40,21 +40,17 @@ top: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  
 }
 
-.login{
-
-    margin-right: 10%;
-    cursor: pointer;
+.login {
+  margin-right: 10%;
+  cursor: pointer;
 }
-.register{
-
-    cursor: pointer;
-    background-color: #f42155;
-    padding: 10px;
-    color: white;
-    font-weight: 900;
-    font-size: 20px;
-   
+.register {
+  cursor: pointer;
+  background-color: #f9649d;
+  padding: 10px;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
 }
