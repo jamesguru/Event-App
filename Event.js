@@ -70,3 +70,57 @@ Home.getInitialProps = async () => {
 };
 
 export default Home;
+
+
+
+////////////////////////////////////////////////////////
+
+
+import { useRouter } from 'next/router';
+
+function SearchForm() {
+  const router = useRouter();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const { location, date, priceRange } = event.target.elements;
+    router.push(`/events?location=${location.value}&date=${date.value}&priceRange=${priceRange.value}`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Location:
+        <input name="location" type="text" />
+      </label>
+      <label>
+        Date:
+        <input name="date" type="date" />
+      </label>
+      <label>
+        Price range:
+        <input name="priceRange" type="range" min="0" max="100" step="10" />
+      </label>
+      <button type="submit">Search</button>
+    </form>
+  );
+}
+
+
+///////////////////////////////////////////////
+
+import { useRouter } from 'next/router';
+
+function EventList() {
+  const router = useRouter();
+  const { location, date, priceRange } = router.query;
+
+  // Use location, date, and priceRange to filter events
+  // ...
+
+  return (
+    <></>
+    // Render filtered events
+    // ...
+  );
+}

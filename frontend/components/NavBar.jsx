@@ -44,18 +44,14 @@ const Navbar = () => {
         </div>
 
         <div className={styles.auth}>
-          <span className={styles.login} onClick={handleLogin}>
-            Login
-          </span>
+          
           <span className={styles.register} onClick={handleRegister}>
-            Register
+            Get notified with events
           </span>
         </div>
       </div>
 
-      {login && (
-        <Login newsArticleId="someId" onClickCallback={handleSaveNote} />
-      )}
+      
       {register && <Register />}
     </>
   );

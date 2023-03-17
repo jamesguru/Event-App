@@ -1,13 +1,12 @@
 .container {
   height: 100px;
   font-weight: 900;
-  position: sticky;
-  top: 0;
+ 
   padding: 10px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: linear-gradient(to left, #401a29, #8a3758);
+  background-image: linear-gradient(to right, #401a29, #8a3758);
   color: whitesmoke;
 }
 
@@ -49,8 +48,9 @@
 .register {
   cursor: pointer;
   background-color: #f9649d;
-  padding: 10px;
+  padding: 15px;
   color: white;
   font-weight: 900;
-  font-size: 20px;
+ 
+ 
 }

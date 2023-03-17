@@ -4,8 +4,15 @@
 .image {
 
   position: relative;
+  
 }
 
+.image img{
+
+  object-fit: cover;
+  height:50%;
+   width:100%;
+}
 
 .detailed{
 
@@ -15,7 +22,6 @@
   background-color: #fff;
   bottom: -40%;
   right: 20%;
-  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .detailed h2{

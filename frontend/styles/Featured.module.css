@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  background-image: linear-gradient(to left, #401a29, #8a3758);
+  background-image: linear-gradient(to right, #401a29, #8a3758);
   color: whitesmoke;
 }
 
@@ -54,7 +54,7 @@
 .search {
   width: 80%;
   background-color: #141316;
-  border-radius: 25px;
+
   color: whitesmoke;
   padding: 10px;
   position: absolute;
@@ -74,6 +74,7 @@
   font-size: 15px;
   font-weight: 900;
   color: #f42155;
+  
 }
 
 .search select {
@@ -81,12 +82,11 @@
   outline: none;
   background-color: transparent;
   color: #f9649d;
-  font-size: 18px;
- 
-
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 500;
   width: 150px;
   padding: 10px;
+  font-family: 'Roboto';
 }
 
 
@@ -108,5 +108,6 @@
   font-weight: 900;
   font-size: 18px;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
 }

@@ -11,7 +11,7 @@ const eventdetailed = () => {
 
       <div className={styles.container}>
         <div className={styles.image}>
-          <img src="/Featured.jpg" alt="" height="50%" width="100%" />
+          <img src="/Featured.jpg" alt="" />
         </div>
         <div className={styles.detailed}>
           <h2>Dinner Party</h2>

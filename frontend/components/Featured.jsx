@@ -1,10 +1,31 @@
-import React,{useState} from "react";
+import { useRouter } from "next/router";
 import styles from "../styles/Featured.module.css";
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-const Featured = () => {
 
-  
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const Featured = () => {
+  const router = useRouter();
+
+  const [price, setPrice] = useState("");
+  const [location, setLocation] = useState("");
+  const [date, setDate] = useState("");
+  const [eventType, setEventsType] = useState("");
+
+  const handleFilter = (event) => {
+    event.preventDefault();
+
+    console.log(price, location, date);
+
+   
+      router.push(
+        `/eventslist?location=${location}&date=${date}&priceRange=${price}&eventType=${eventType}`
+      );
+   
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -18,14 +39,7 @@ const Featured = () => {
           </span>
         </div>
         <div className={styles.image}>
-          <video
-            src="/video.mp4"
-            
-            autoPlay
-            muted
-            loop
-           
-          />
+          <video src="/video.mp4" autoPlay muted loop />
         </div>
       </div>
 
@@ -33,42 +47,64 @@ const Featured = () => {
         <div className={styles.search_item}>
           <div>
             <h3>Location</h3>
-            <input type="text" placeholder="search location" />
+            <input
+              type="text"
+              placeholder="search location"
+              onChange={(e) => setLocation(e.target.value)}
+            />
           </div>
         </div>
         <div className={styles.search_item}>
           <div>
             <h3>Date</h3>
-            <input type="date" />
+            <input type="date" onChange={(e) => setDate(e.target.value)} />
           </div>
         </div>
 
         <div className={styles.search_item}>
           <div>
             <h3>Price</h3>
-            <input type="number" placeholder="ksh" />
-          </div>
-        </div>
-        <div className={styles.search_item}>
-          <div>
-            <h3>Tickets Type</h3>
-            <select name="" id="">
-                <option value="">select</option>
-                <option value="">Type 1</option>
-                <option value="">Type 2</option>
-                <option value="">Type 3</option>
-                <option value="">Type 4</option>
-
+            <select onChange={(e) => setPrice(e.target.value)}>
+              <option value="" disabled selected>
+                All prices
+              </option>
+              <option value="0-500">$0 - $500</option>
+              <option value="500-1000">$500 - $1000</option>
+              <option value="1000+">$1000+</option>
             </select>
           </div>
         </div>
-        <Link href="/eventslist">
-          <button className={styles.events_button}>Find events</button>
-        </Link>
-        
+
+        <div className={styles.search_item}>
+          <div>
+            <h3>Events </h3>
+            <select onChange={(e) => setEventsType(e.target.value)}>
+              <option value="" selected disabled>
+                All types
+              </option>
+              <option value="Online">Online</option>
+              <option value="Physical">Physical</option>
+              <option value="Blended">Blended</option>
+            </select>
+          </div>
+        </div>
+
+        <button className={styles.events_button} onClick={handleFilter}>
+          Find events
+        </button>
       </div>
-
-
+      <ToastContainer
+        position="right-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

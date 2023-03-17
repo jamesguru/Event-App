@@ -66,11 +66,13 @@
     margin: 3% 0%;
   position: relative;
   width: 30%;
-  height: 35%;
+  height: 50%;
   box-shadow: 10px 10px 5px #aaaaaa;
 }
 .image {
   object-fit: cover;
+  height:50%;
+  width:100%;
 }
 
 .event_image {
@@ -116,7 +118,7 @@
 
     height: 50px;
     width: 50px;
-    background-color: #8a3758;
+    background-color: #f9649d;
     border-radius: 50%;
     color: #fff;
     padding: 10px;
@@ -130,7 +132,7 @@
 
     transform: scale(1.1);
     background-color: #fff;
-    color: #f42155;
+    color: #f9649d;
 }
 
 .event_desc{
@@ -140,11 +142,11 @@
 
 .event_date h3{
 
-    margin: 10px;
+    margin: 20px;
     font-size: 25px;
     font-weight: 900;
     font-family: "Roboto";
-    color: #444;
+    color: #8a3758;
 }
 
 
@@ -163,6 +165,6 @@
   font-weight: 900;
   width: 150px;
   font-size: 18px;
-  color: #f42155;
+  color: #f9649d;
   cursor: pointer;
 }

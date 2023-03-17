@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Events.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
 const Events = () => {
   return (
@@ -33,10 +34,9 @@ const Events = () => {
       <div className={styles.events_body}>
         <div className={styles.event_item}>
           <div className={styles.event_image}>
-            <Image
+            <img
               src="/party.jpg"
-              height={300}
-              width={428}
+              
               alt="no photo"
               className={styles.image}
             />
@@ -228,7 +228,9 @@ const Events = () => {
 
       <div className={styles.load_more}>
 
-            <button>Load more</button>
+        <Link href="/eventslist"><button>Load more</button></Link>
+
+            
       </div>
     </div>
   );
