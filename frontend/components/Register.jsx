@@ -4,27 +4,30 @@ import Link from "next/link";
 
 const Register = () => {
   const [Register, setRegister] = useState(false);
+
+  const backHome = () => {
+    window.location.reload()
+  }
   return (
     <div className={styles.register}>
       <div className={styles.register_item}>
         <div className={styles.register_input}>
           <div className={styles.back_home}>
-            <Link href="/">
-              <button>Back home</button>
-            </Link>
+            
+              <button onClick={backHome}>Back home</button>
+         
           </div>
 
-          <h1>Create Account</h1>
-          <span>Fill in the forms to register.</span>
-          <label htmlFor="">Username</label>
-          <input type="text" />
-
+          
+          <span>Fill in the form to get notified of events.</span>
+          <label htmlFor="">Name</label>
+          <input type="text" placeholder="John Doe"/>
           <label htmlFor="">Email</label>
-          <input type="text" />
-          <label htmlFor="">Password</label>
-          <input type="text" />
-          <span>Forget password</span>
-          <button>Register</button>
+          <input type="text" placeholder="johndoe@gmail.com" />
+          <label htmlFor="">Phone</label>
+          <input type="text" placeholder="+254727632051"/>
+          
+          <button>Get notified</button>
         </div>
 
         <div className={styles.image}>

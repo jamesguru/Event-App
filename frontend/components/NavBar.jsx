@@ -27,35 +27,38 @@ const Navbar = () => {
     <>
       <div className={styles.container}>
         <span className={styles.logo}>
-          <Link href="/">MVX</Link>
+
+        <Link href={`/`}>
+          MVX
+          </Link>
         </span>
 
         <div className={styles.menu}>
           <span>
-            <Link href="/">Home</Link>
+          <Link href={`/`}>
+           Home
+           </Link>
           </span>
           <span>About us</span>
 
           <span>
-            <Link href="/MCS">MCs</Link>
+          <Link href={`/MCS`}>
+            MCs
+            </Link>
           </span>
 
           <span>Events organizers</span>
         </div>
 
         <div className={styles.auth}>
-          <span className={styles.login} onClick={handleLogin}>
-            Login
-          </span>
+          
           <span className={styles.register} onClick={handleRegister}>
-            Register
+            Get notified with events
           </span>
         </div>
       </div>
 
-      {login && (
-        <Login newsArticleId="someId" onClickCallback={handleSaveNote} />
-      )}
+      
       {register && <Register />}
     </>
   );
