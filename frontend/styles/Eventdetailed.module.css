@@ -1,3 +1,9 @@
+
+.wrapper{
+
+  height: auto;
+}
+
 .container {
   display: flex;
 }
@@ -20,8 +26,9 @@
   width: 70%;
   position: absolute;
   background-color: #fff;
-  bottom: -40%;
+  bottom: -2%;
   right: 20%;
+  padding: 20px;
 }
 
 .detailed h2{
@@ -52,8 +59,8 @@
 
 .bottom_detail{
 
-  margin: 30px;
-  width: 70%;
+  text-align: left;
+
 }
 
 .icons{
@@ -64,7 +71,13 @@
 
 .media{
 
-  margin: 0px 20%;
+  
+}
+
+.schedule{
+
+  width: 70%;
+  cursor: pointer;
 }
 
 .media h2{

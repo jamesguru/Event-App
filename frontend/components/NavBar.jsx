@@ -27,17 +27,24 @@ const Navbar = () => {
     <>
       <div className={styles.container}>
         <span className={styles.logo}>
-          <Link href="/">MVX</Link>
+
+        <Link href={`/`}>
+          MVX
+          </Link>
         </span>
 
         <div className={styles.menu}>
           <span>
-            <Link href="/">Home</Link>
+          <Link href={`/`}>
+           Home
+           </Link>
           </span>
           <span>About us</span>
 
           <span>
-            <Link href="/MCS">MCs</Link>
+          <Link href={`/MCS`}>
+            MCs
+            </Link>
           </span>
 
           <span>Events organizers</span>
