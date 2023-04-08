@@ -6,6 +6,14 @@ const NewsletterSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    username: {
+      type: String,
+      required: true,
+    },
+    phone: {
+      type: Number,
+      required: true,
+    },
 
     status: { type: Number, default: 0 },
   },
