@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import app from "../../firebasestore";
 import { addProduct } from "../../redux/apiCalls";
 import axios from "axios";
-let ItinenaryDay = [];
+let Schedule = [];
 var Pricing = [];
 
 export default function NewProduct() {
@@ -104,11 +104,11 @@ export default function NewProduct() {
 
       console.log(itinenaryItem);
 
-      ItinenaryDay.push(itinenaryItem);
+      Schedule.push(itinenaryItem);
 
-      setNumberofDays(ItinenaryDay.length);
+      setNumberofDays(Schedule.length);
 
-      toast.success(`You have added Itinenary ${ItinenaryDay.length}`, {
+      toast.success(`You have added Itinenary ${Schedule.length}`, {
         position: toast.POSITION.BOTTOM_CENTER,
         autoClose: 2500,
         hideProgressBar: false,
@@ -409,7 +409,7 @@ export default function NewProduct() {
       img3: image3,
       img4: image4,
       categories: cat,
-      itinenary: ItinenaryDay,
+      schedule: Schedule,
       pricing: Pricing,
       accomodation: accomodation,
       gallery: gallery,
@@ -432,7 +432,7 @@ export default function NewProduct() {
 
   return (
     <div className="newProduct">
-      <h1 className="addProductTitle">New Package</h1>
+      <h3>New Event</h3>
       <form className="addProductForm">
         <div className="addProductItem">
           <label>Image</label>
@@ -458,7 +458,7 @@ export default function NewProduct() {
           <h4 style={{ color: "teal" }}>{`File upload is ${percentage} %`}</h4>
         </div>
         <div className="addProductItem">
-          <label>Title </label>
+          <label>Event Title </label>
           <input
             type="text"
             name="title"
@@ -497,13 +497,12 @@ export default function NewProduct() {
             onChange={handleChange}
           />
         </div>
-
         <div className="addProductItem">
-          <label>Tour Type</label>
+          <label>Date</label>
           <input
-            name="tourtype"
-            type="text"
-            placeholder="Daily Tour"
+            name="duration"
+            type="date"
+            placeholder="4 days"
             onChange={handleChange}
           />
         </div>
@@ -513,241 +512,169 @@ export default function NewProduct() {
           <input
             name="groupsize"
             type="number"
-            placeholder="5"
+            placeholder="300"
             onChange={handleChange}
           />
         </div>
 
-        <div className="addProductItem">
-          <label>Tour Guide </label>
-          <input
-            name="tourguide"
-            type="number"
-            placeholder="10"
-            onChange={handleChange}
-          />
-        </div>
+        <div className="addItem">
+          <h5>Event Type </h5>
 
-        <div className="addProductItem">
-          <label>Overview</label>
-          <textarea
-            cols="40"
-            rows="5"
-            name="overview"
-            onChange={handleChange}
-          ></textarea>
-        </div>
-
-        <div className="addProductItem">
-          <label>Category </label>
+          <div className="item">
+            <span>Physical</span>
           <input
             name="category"
-            type="text"
+            type="checkbox"
             placeholder="family-holidays,tanzania"
             onChange={handleCat}
           />
-        </div>
-
-        <div className="addProductItem">
-          <label>Itinerary</label>
-
-          <span className="itinenary">Day {numberOfDays} Added</span>
-
-          <ToastContainer
-            position="right-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-          />
-
+          </div>
+          <div className="item">
+            <span>Online</span>
           <input
-            type="text"
-            placeholder="Fly Nairobi - Masai Mara Game Reserve"
-            onChange={handleDay}
-            value={day}
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
           />
-          <textarea
-            cols="40"
-            rows="5"
-            name="Itinerary"
-            className="itenerary"
-            placeholder="Jambo Kenya the first day in Nairobi kenya."
-            onChange={handleItenenary}
-            value={Itinenary}
-          ></textarea>
+          </div>
+          <div className="item">
+            <span>Webinar</span>
+          <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+          <div className="item">
+            <span>Blended</span>
+          <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+         
+        </div>
+        <div className="addItem">
+          <h5>Category </h5>
 
-          <button onClick={handleAddItenenary}>add itinenary</button>
+          <div className="item">
+            <label htmlFor="">Physical</label>
+            <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+          <div className="item">
+            <label htmlFor="">Online</label>
+            <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+          <div className="item">
+            <label htmlFor="">Webinar</label>
+            <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+          <div className="item">
+            <label htmlFor="">Popular</label>
+            <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+          <div className="item">
+            <label htmlFor="">Blended</label>
+            <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+          <div className="item">
+            <label htmlFor="">Educational</label>
+            <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
+          <div className="item">
+            <label htmlFor="">Entertain</label>
+            <input
+            name="category"
+            type="checkbox"
+            placeholder="family-holidays,tanzania"
+            onChange={handleCat}
+          />
+          </div>
         </div>
 
         <hr />
 
         <div className="addProductItem">
-          <label>Pricing </label>
-          <span className="itinenary">Pricing {numberOfPricing} Added</span>
+          <label>Schedule </label>
+          <span className="itinenary">Schedule {numberOfPricing} Added</span>
 
           <div className="pricing-card">
             <div className="pricing-item">
-              <span>Enter start date for pricing</span>
+              <span>Enter start time for event</span>
 
               <input
                 name="startdatepricing"
-                type="date"
-                placeholder="Fri 21 APR 2023"
+                type="text"
+                placeholder="08:00AM"
                 value={startDatePricing}
                 onChange={(e) => setStartDatePricing(e.target.value)}
               />
             </div>
 
             <div className="pricing-item">
-              <span>Enter last date for pricing</span>
+              <span>Enter last time for event</span>
 
               <input
                 name="lastdatepricing"
-                type="date"
-                placeholder="Wed 1 JUN 2023"
+                type="text"
+                placeholder="10:00AM"
                 value={lastDatePricing}
                 onChange={(e) => setLastDatePricing(e.target.value)}
               />
             </div>
-
             <div className="pricing-item">
-              <span>1. Price(solo)</span>
+              <span>Activity</span>
 
-              <input
-                name="pricingprice"
-                type="number"
-                placeholder="300"
-                value={pricingPrice1}
-                onChange={(e) => setPricingPrice1(e.target.value)}
-              />
-              <span htmlFor="">Number of rooms</span>
-
-              <input
-                type="number"
-                value={room1}
-                onChange={(e) => setRoom1(e.target.value)}
+              <textarea
+                name="activity"
+                type="text"
+                placeholder="Welcoming the guests."
+                value={lastDatePricing}
+                onChange={(e) => setLastDatePricing(e.target.value)}
+                className="activity"
               />
             </div>
 
-            <hr />
 
-            <div className="pricing-item">
-              <span>2. Price(2 people)</span>
-
-              <input
-                name="pricingprice"
-                type="number"
-                placeholder="500"
-                value={pricingPrice2}
-                onChange={(e) => setPricingPrice2(e.target.value)}
-              />
-              <span htmlFor="">Number of rooms</span>
-
-              <input
-                type="number"
-                value={room2}
-                onChange={(e) => setRoom2(e.target.value)}
-              />
-            </div>
-
-            <hr />
-
-            <div className="pricing-item">
-              <span>3. Price(3 people)</span>
-
-              <input
-                name="pricingprice"
-                type="number"
-                placeholder="670"
-                value={pricingPrice3}
-                onChange={(e) => setPricingPrice3(e.target.value)}
-              />
-              <span htmlFor="">Number of rooms</span>
-
-              <input
-                type="number"
-                value={room3}
-                onChange={(e) => setRoom3(e.target.value)}
-                placeholder="0"
-              />
-            </div>
-            <hr />
-
-            <div className="pricing-item">
-              <span>4. Price(4 people)</span>
-
-              <input
-                name="pricingprice"
-                type="number"
-                placeholder="700"
-                value={pricingPrice4}
-                onChange={(e) => setPricingPrice4(e.target.value)}
-              />
-              <span htmlFor="">Number of rooms</span>
-
-              <input
-                type="number"
-                value={room4}
-                onChange={(e) => setRoom4(e.target.value)}
-              />
-            </div>
-
-            <div className="pricing-item">
-              <span>5. Price(5 people)</span>
-
-              <input
-                name="pricingprice"
-                type="number"
-                placeholder="880"
-                value={pricingPrice5}
-                onChange={(e) => setPricingPrice5(e.target.value)}
-              />
-              <span htmlFor="">Number of rooms</span>
-
-              <input
-                type="number"
-                value={room5}
-                onChange={(e) => setRoom5(e.target.value)}
-              />
-            </div>
-
-            <div className="pricing-item">
-              <span>6. Price(6 people)</span>
-
-              <input
-                name="pricingprice"
-                type="number"
-                placeholder="1200"
-                value={pricingPrice6}
-                onChange={(e) => setPricingPrice6(e.target.value)}
-              />
-              <span htmlFor="">Number of rooms</span>
-
-              <input
-                type="number"
-                value={room6}
-                onChange={(e) => setRoom6(e.target.value)}
-              />
-            </div>
-          </div>
-          <button onClick={handlePricing}>add pricing</button>
+           </div>
+          <button onClick={handlePricing}>add schedule</button>
           <hr />
         </div>
-        <div className="addProductItem">
-          <label>Accomodation </label>
-          <input
-            name="pricing"
-            type="text"
-            placeholder="Bantu Resort, Golf Course"
-            onChange={handleAccomodation}
-          />
-        </div>
+        
         <div className="addProductItem">
           <label>Gallery Images</label>
 

@@ -97,3 +97,15 @@ width: 50%;
 
   margin: 5px;
 }
+
+.activity{
+
+  padding: 60px;
+  width: 400px;
+  height: 300px;
+}
+
+.item input{
+  margin-left: 20px;
+  padding: 15px;
+}
